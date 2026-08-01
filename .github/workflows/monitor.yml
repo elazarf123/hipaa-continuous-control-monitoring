@@ -1,0 +1,42 @@
+name: Continuous control monitoring
+
+on:
+  schedule:
+    - cron: "0 12 * * 1"    # Mondays, 12:00 UTC
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run control tests
+        run: pytest tests/ -q
+
+      - name: Evaluate controls
+        run: python src/run_monitor.py
+
+      - name: Commit snapshot and evidence pack
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain history/ output/)" ]; then
+            git add history/ output/
+            git commit -m "chore(ccm): control snapshot $(date -u +%Y-%m-%d)"
+            git push
+          else
+            echo "No posture change."
+          fi
