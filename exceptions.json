@@ -1,0 +1,26 @@
+{
+  "_comment": "Accepted risks. Every entry MUST carry an expiry date - an exception without one is just an unfixed finding.",
+  "exceptions": [
+    {
+      "control_id": "C04",
+      "subject": "service_scanner01",
+      "reason": "Service account; password rotation handled by vault on a separate schedule.",
+      "approved_by": "Security Manager",
+      "expires_on": "2027-01-31"
+    },
+    {
+      "control_id": "C05",
+      "subject": "breakglass_admin",
+      "reason": "Emergency break-glass account - dormancy is expected and monitored separately.",
+      "approved_by": "CISO",
+      "expires_on": "2026-12-31"
+    },
+    {
+      "control_id": "C01",
+      "subject": "legacy_lab_integration",
+      "reason": "EXPIRED EXAMPLE - shows the register stops suppressing automatically.",
+      "approved_by": "Security Manager",
+      "expires_on": "2025-06-30"
+    }
+  ]
+}
