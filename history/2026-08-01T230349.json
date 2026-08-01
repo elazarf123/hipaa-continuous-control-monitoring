@@ -1,0 +1,555 @@
+{
+  "run_at": "2026-08-01T23:03:49+00:00",
+  "posture_score": 33.3,
+  "controls": [
+    {
+      "control_id": "C01",
+      "title": "Multi-factor authentication enabled on all accounts with ePHI access",
+      "hipaa": "164.312(d) Person or Entity Authentication",
+      "nist_csf": "PR.AA-03",
+      "evaluated": 41,
+      "failures": 8,
+      "findings": [
+        {
+          "account": "nnakamura04",
+          "role": "Billing Specialist",
+          "department": "IT",
+          "issue": "ePHI-access account without MFA",
+          "severity": "HIGH"
+        },
+        {
+          "account": "jalvarez17",
+          "role": "Billing Specialist",
+          "department": "Emergency",
+          "issue": "ePHI-access account without MFA",
+          "severity": "HIGH"
+        },
+        {
+          "account": "mreyes22",
+          "role": "Billing Specialist",
+          "department": "IT",
+          "issue": "ePHI-access account without MFA",
+          "severity": "HIGH"
+        },
+        {
+          "account": "mdoyle26",
+          "role": "Physician",
+          "department": "Emergency",
+          "issue": "ePHI-access account without MFA",
+          "severity": "HIGH"
+        },
+        {
+          "account": "adoyle34",
+          "role": "Registered Nurse",
+          "department": "Emergency",
+          "issue": "ePHI-access account without MFA",
+          "severity": "HIGH"
+        },
+        {
+          "account": "rdoyle38",
+          "role": "Billing Specialist",
+          "department": "Emergency",
+          "issue": "ePHI-access account without MFA",
+          "severity": "HIGH"
+        },
+        {
+          "account": "oreyes65",
+          "role": "Lab Technician",
+          "department": "Billing",
+          "issue": "ePHI-access account without MFA",
+          "severity": "HIGH"
+        },
+        {
+          "account": "dalvarez74",
+          "role": "Registered Nurse",
+          "department": "Radiology",
+          "issue": "ePHI-access account without MFA",
+          "severity": "HIGH"
+        }
+      ],
+      "threshold_warn": 0.98,
+      "threshold_fail": 0.9,
+      "compliance_rate": 0.8049,
+      "status": "FAIL"
+    },
+    {
+      "control_id": "C02",
+      "title": "Accounts disabled promptly on termination",
+      "hipaa": "164.308(a)(3)(ii)(C) Termination Procedures",
+      "nist_csf": "PR.AA-01",
+      "evaluated": 80,
+      "failures": 0,
+      "findings": [],
+      "threshold_warn": 0.98,
+      "threshold_fail": 0.9,
+      "compliance_rate": 1.0,
+      "status": "PASS"
+    },
+    {
+      "control_id": "C03",
+      "title": "Group membership stays within the approved RBAC matrix",
+      "hipaa": "164.308(a)(4) Information Access Management",
+      "nist_csf": "PR.AA-05",
+      "evaluated": 77,
+      "failures": 7,
+      "findings": [
+        {
+          "account": "mhassan01",
+          "role": "IT Support",
+          "unauthorized_groups": [
+            "Domain-Admin"
+          ],
+          "issue": "Group membership outside approved role definition",
+          "severity": "HIGH"
+        },
+        {
+          "account": "csilva14",
+          "role": "IT Support",
+          "unauthorized_groups": [
+            "Log-Read"
+          ],
+          "issue": "Group membership outside approved role definition",
+          "severity": "MEDIUM"
+        },
+        {
+          "account": "oalvarez40",
+          "role": "Security Analyst",
+          "unauthorized_groups": [
+            "EHR-Admin"
+          ],
+          "issue": "Group membership outside approved role definition",
+          "severity": "HIGH"
+        },
+        {
+          "account": "rdoyle58",
+          "role": "Lab Technician",
+          "unauthorized_groups": [
+            "EHR-Admin"
+          ],
+          "issue": "Group membership outside approved role definition",
+          "severity": "HIGH"
+        },
+        {
+          "account": "mdoyle69",
+          "role": "Billing Specialist",
+          "unauthorized_groups": [
+            "Domain-Admin"
+          ],
+          "issue": "Group membership outside approved role definition",
+          "severity": "HIGH"
+        },
+        {
+          "account": "oreyes73",
+          "role": "Front Desk",
+          "unauthorized_groups": [
+            "EHR-Admin"
+          ],
+          "issue": "Group membership outside approved role definition",
+          "severity": "HIGH"
+        },
+        {
+          "account": "odoyle75",
+          "role": "Registered Nurse",
+          "unauthorized_groups": [
+            "Revenue-Cycle"
+          ],
+          "issue": "Group membership outside approved role definition",
+          "severity": "MEDIUM"
+        }
+      ],
+      "threshold_warn": 0.98,
+      "threshold_fail": 0.9,
+      "compliance_rate": 0.9091,
+      "status": "WARN"
+    },
+    {
+      "control_id": "C04",
+      "title": "Passwords rotated within 90 days",
+      "hipaa": "164.308(a)(5)(ii)(D) Password Management",
+      "nist_csf": "PR.AA-01",
+      "evaluated": 77,
+      "failures": 38,
+      "findings": [
+        {
+          "account": "malvarez00",
+          "role": "Security Analyst",
+          "password_age_days": 140,
+          "issue": "Password older than 90 days",
+          "severity": "MEDIUM"
+        },
+        {
+          "account": "mhassan01",
+          "role": "IT Support",
+          "password_age_days": 95,
+          "issue": "Password older than 90 days",
+          "severity": "MEDIUM"
+        },
+        {
+          "account": "csilva05",
+          "role": "IT Support",
+          "password_age_days": 210,
+          "issue": "Password older than 90 days",
+          "severity": "MEDIUM"
+        },
+        {
+          "account": "onakamura09",
+          "role": "Billing Specialist",
+          "password_age_days": 140,
+          "issue": "Password older than 90 days",
+          "severity": "MEDIUM"
+        },
+        {
+          "account": "osilva11",
+          "role": "IT Support",
+          "password_age_days": 210,
+          "issue": "Password older than 90 days",
+          "severity": "MEDIUM"
+        },
+        {
+          "account": "csilva14",
+          "role": "IT Support",
+          "password_age_days": 140,
+          "issue": "Password older than 90 days",
+          "severity": "MEDIUM"
+        },
+        {
+          "account": "palvarez16",
+          "role": "Lab Technician",
+          "password_age_days": 210,
+          "issue": "Password older than 90 days",
+          "severity": "MEDIUM"
+        },
+        {
+          "account": "rokafor18",
+          "role": "Registered Nurse",
+          "password_age_days": 95,
+          "issue": "Password older than 90 days",
+          "severity": "MEDIUM"
+        },
+        {
+          "account": "mreyes22",
+          "role": "Billing Specialist",
+          "password_age_days": 95,
+          "issue": "Password older than 90 days",
+          "severity": "MEDIUM"
+        },
+        {
+          "account": "lalvarez24",
+          "role": "Front Desk",
+          "password_age_days": 140,
+          "issue": "Password older than 90 days",
+          "severity": "MEDIUM"
+        },
+        {
+          "account": "mdoyle26",
+          "role": "Physician",
+          "password_age_days": 95,
+          "issue": "Password older than 90 days",
+          "severity": "MEDIUM"
+        },
+        {
+          "account": "ahassan28",
+          "role": "Front Desk",
+          "password_age_days": 140,
+          "issue": "Password older than 90 days",
+          "severity": "MEDIUM"
+        },
+        {
+          "account": "rdoyle29",
+          "role": "Lab Technician",
+          "password_age_days": 95,
+          "issue": "Password older than 90 days",
+          "severity": "MEDIUM"
+        },
+        {
+          "account": "nalvarez30",
+          "role": "Security Analyst",
+          "password_age_days": 95,
+          "issue": "Password older than 90 days",
+          "severity": "MEDIUM"
+        },
+        {
+          "account": "pbennett31",
+          "role": "Lab Technician",
+          "password_age_days": 95,
+          "issue": "Password older than 90 days",
+          "severity": "MEDIUM"
+        },
+        {
+          "account": "jsilva33",
+          "role": "Billing Specialist",
+          "password_age_days": 210,
+          "issue": "Password older than 90 days",
+          "severity": "MEDIUM"
+        },
+        {
+          "account": "mokafor37",
+          "role": "Registered Nurse",
+          "password_age_days": 140,
+          "issue": "Password older than 90 days",
+          "severity": "MEDIUM"
+        },
+        {
+          "account": "msilva42",
+          "role": "Physician",
+          "password_age_days": 140,
+          "issue": "Password older than 90 days",
+          "severity": "MEDIUM"
+        },
+        {
+          "account": "jnakamura44",
+          "role": "Lab Technician",
+          "password_age_days": 210,
+          "issue": "Password older than 90 days",
+          "severity": "MEDIUM"
+        },
+        {
+          "account": "jdoyle45",
+          "role": "Physician",
+          "password_age_days": 140,
+          "issue": "Password older than 90 days",
+          "severity": "MEDIUM"
+        },
+        {
+          "account": "nnakamura46",
+          "role": "Front Desk",
+          "password_age_days": 95,
+          "issue": "Password older than 90 days",
+          "severity": "MEDIUM"
+        },
+        {
+          "account": "dhassan48",
+          "role": "Registered Nurse",
+          "password_age_days": 95,
+          "issue": "Password older than 90 days",
+          "severity": "MEDIUM"
+        },
+        {
+          "account": "dreyes49",
+          "role": "Front Desk",
+          "password_age_days": 210,
+          "issue": "Password older than 90 days",
+          "severity": "MEDIUM"
+        },
+        {
+          "account": "jsilva50",
+          "role": "Security Analyst",
+          "password_age_days": 140,
+          "issue": "Password older than 90 days",
+          "severity": "MEDIUM"
+        },
+        {
+          "account": "osilva53",
+          "role": "Physician",
+          "password_age_days": 210,
+          "issue": "Password older than 90 days",
+          "severity": "MEDIUM"
+        },
+        {
+          "account": "pbennett54",
+          "role": "Lab Technician",
+          "password_age_days": 210,
+          "issue": "Password older than 90 days",
+          "severity": "MEDIUM"
+        },
+        {
+          "account": "rdoyle58",
+          "role": "Lab Technician",
+          "password_age_days": 210,
+          "issue": "Password older than 90 days",
+          "severity": "MEDIUM"
+        },
+        {
+          "account": "rsilva59",
+          "role": "Security Analyst",
+          "password_age_days": 95,
+          "issue": "Password older than 90 days",
+          "severity": "MEDIUM"
+        },
+        {
+          "account": "rdoyle60",
+          "role": "Lab Technician",
+          "password_age_days": 210,
+          "issue": "Password older than 90 days",
+          "severity": "MEDIUM"
+        },
+        {
+          "account": "ndoyle63",
+          "role": "Front Desk",
+          "password_age_days": 210,
+          "issue": "Password older than 90 days",
+          "severity": "MEDIUM"
+        },
+        {
+          "account": "ahassan64",
+          "role": "Security Analyst",
+          "password_age_days": 210,
+          "issue": "Password older than 90 days",
+          "severity": "MEDIUM"
+        },
+        {
+          "account": "jdoyle68",
+          "role": "Billing Specialist",
+          "password_age_days": 210,
+          "issue": "Password older than 90 days",
+          "severity": "MEDIUM"
+        },
+        {
+          "account": "mreyes71",
+          "role": "Front Desk",
+          "password_age_days": 95,
+          "issue": "Password older than 90 days",
+          "severity": "MEDIUM"
+        },
+        {
+          "account": "mokafor72",
+          "role": "Security Analyst",
+          "password_age_days": 95,
+          "issue": "Password older than 90 days",
+          "severity": "MEDIUM"
+        },
+        {
+          "account": "oreyes73",
+          "role": "Front Desk",
+          "password_age_days": 95,
+          "issue": "Password older than 90 days",
+          "severity": "MEDIUM"
+        },
+        {
+          "account": "dalvarez74",
+          "role": "Registered Nurse",
+          "password_age_days": 140,
+          "issue": "Password older than 90 days",
+          "severity": "MEDIUM"
+        },
+        {
+          "account": "rnakamura76",
+          "role": "Security Analyst",
+          "password_age_days": 210,
+          "issue": "Password older than 90 days",
+          "severity": "MEDIUM"
+        },
+        {
+          "account": "csilva79",
+          "role": "Lab Technician",
+          "password_age_days": 95,
+          "issue": "Password older than 90 days",
+          "severity": "MEDIUM"
+        }
+      ],
+      "threshold_warn": 0.98,
+      "threshold_fail": 0.9,
+      "compliance_rate": 0.5065,
+      "status": "FAIL"
+    },
+    {
+      "control_id": "C05",
+      "title": "Privileged accounts used within 45 days",
+      "hipaa": "164.308(a)(4)(ii)(B) Access Authorization",
+      "nist_csf": "PR.AA-05",
+      "evaluated": 15,
+      "failures": 9,
+      "findings": [
+        {
+          "account": "lnakamura13",
+          "role": "IT Support",
+          "days_since_last_login": 87,
+          "issue": "Privileged account dormant - standing access without use",
+          "severity": "HIGH"
+        },
+        {
+          "account": "pbennett15",
+          "role": "IT Support",
+          "days_since_last_login": 47,
+          "issue": "Privileged account dormant - standing access without use",
+          "severity": "HIGH"
+        },
+        {
+          "account": "oreyes19",
+          "role": "IT Support",
+          "days_since_last_login": 85,
+          "issue": "Privileged account dormant - standing access without use",
+          "severity": "HIGH"
+        },
+        {
+          "account": "dalvarez32",
+          "role": "IT Support",
+          "days_since_last_login": 119,
+          "issue": "Privileged account dormant - standing access without use",
+          "severity": "HIGH"
+        },
+        {
+          "account": "oalvarez40",
+          "role": "Security Analyst",
+          "days_since_last_login": 55,
+          "issue": "Privileged account dormant - standing access without use",
+          "severity": "HIGH"
+        },
+        {
+          "account": "rdoyle58",
+          "role": "Lab Technician",
+          "days_since_last_login": 59,
+          "issue": "Privileged account dormant - standing access without use",
+          "severity": "HIGH"
+        },
+        {
+          "account": "abennett67",
+          "role": "IT Support",
+          "days_since_last_login": 48,
+          "issue": "Privileged account dormant - standing access without use",
+          "severity": "HIGH"
+        },
+        {
+          "account": "mdoyle69",
+          "role": "Billing Specialist",
+          "days_since_last_login": 99,
+          "issue": "Privileged account dormant - standing access without use",
+          "severity": "HIGH"
+        },
+        {
+          "account": "oreyes73",
+          "role": "Front Desk",
+          "days_since_last_login": 103,
+          "issue": "Privileged account dormant - standing access without use",
+          "severity": "HIGH"
+        }
+      ],
+      "threshold_warn": 0.98,
+      "threshold_fail": 0.9,
+      "compliance_rate": 0.4,
+      "status": "FAIL"
+    },
+    {
+      "control_id": "C06",
+      "title": "ePHI systems emit audit logs every day in the review window",
+      "hipaa": "164.312(b) Audit Controls",
+      "nist_csf": "DE.CM-09",
+      "evaluated": 56,
+      "failures": 3,
+      "findings": [
+        {
+          "system": "PACS",
+          "date": "2026-07-29",
+          "issue": "No audit events recorded for an ePHI system on this day",
+          "severity": "HIGH"
+        },
+        {
+          "system": "PACS",
+          "date": "2026-07-28",
+          "issue": "No audit events recorded for an ePHI system on this day",
+          "severity": "HIGH"
+        },
+        {
+          "system": "PACS",
+          "date": "2026-07-27",
+          "issue": "No audit events recorded for an ePHI system on this day",
+          "severity": "HIGH"
+        }
+      ],
+      "threshold_warn": 0.98,
+      "threshold_fail": 0.9,
+      "compliance_rate": 0.9464,
+      "status": "WARN"
+    }
+  ]
+}
