@@ -1,6 +1,6 @@
 # HIPAA Continuous Control Monitoring - Evidence Pack
 
-**Run:** 2026-08-01T23:16:26+00:00  
+**Run:** 2026-08-03T14:31:28+00:00  
 **Posture score:** 33.3%
 
 > Synthetic environment. No real identities, credentials, or PHI.
@@ -63,6 +63,6 @@
 
 ### C06 - ePHI systems emit audit logs every day in the review window
 
+- `HIGH` system=PACS, date=2026-07-31, issue=No audit events recorded for an ePHI system on this day
+- `HIGH` system=PACS, date=2026-07-30, issue=No audit events recorded for an ePHI system on this day
 - `HIGH` system=PACS, date=2026-07-29, issue=No audit events recorded for an ePHI system on this day
-- `HIGH` system=PACS, date=2026-07-28, issue=No audit events recorded for an ePHI system on this day
-- `HIGH` system=PACS, date=2026-07-27, issue=No audit events recorded for an ePHI system on this day
